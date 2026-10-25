@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Same Content Security Policy as the Home Page: own files, Google Fonts, HTTPS images only.
+       No inline scripts or inline style attributes are used on this page. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>Contact SOLNEX Energy Solution | Solar Enquiries in Bhopal</title>
+  <meta name="description" content="Talk to SOLNEX Energy Solution about solar for your home, business or industrial facility in Bhopal, Madhya Pradesh. Call, message on WhatsApp or send an enquiry.">
+  <meta name="author" content="SOLNEX Energy Solution">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#164E3B">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./contact.css">
+</head>
+<body class="contact-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="sun-track" id="sun-track" aria-hidden="true"><span class="sun-dot"></span></div>
+
+  <!-- ===================== HEADER (same as Home Page) ===================== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="SOLNEX Energy Solution – Home">
+        <img src="assets/logo.svg" alt="SOLNEX logo" width="64" height="43">
+        <span class="brand-text">ENERGY SOLUTION</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="index.html#subsidy">Subsidy</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+        <a class="btn btn-primary nav-cta" href="#enquiry" data-focus-form="true">Get a Solar Consultation</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== 1. HERO (white, animated, with a real photo) ===================== -->
+    <section class="ctx-hero" id="ctx-hero" aria-labelledby="hero-title">
+      <div class="ctx-bg" aria-hidden="true"><span class="ctx-blob b1"></span><span class="ctx-blob b2"></span><span class="ctx-dots"></span></div>
+
+      <div class="container ctx-hero-grid">
+        <div class="ctx-copy">
+          <p class="ctx-eyebrow ctx-in ctx-d1"><span class="ctx-dot" aria-hidden="true"></span>Let&rsquo;s connect</p>
+          <h1 id="hero-title"><span class="w"><span>Let&rsquo;s</span></span> <span class="w"><span>Talk</span></span> <span class="w"><span>About</span></span> <span class="w"><span>Your</span></span> <span class="w"><span>Solar</span></span> <span class="w"><span>Future.</span></span></h1>
+          <p class="ctx-lead ctx-in ctx-d3">Have questions about solar for your home, business, or industrial facility? Connect with SOLNEX and let&rsquo;s explore a solution that fits your needs.</p>
+          <div class="btn-row ctx-actions ctx-in ctx-d4">
+            <a class="btn btn-primary ct-pulse" href="https://wa.me/919131910814?text=Hello%20SOLNEX%2C%20I%20would%20like%20to%20know%20more%20about%20your%20solar%20solutions." target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12Z"/><path d="M9 9.5c.4 2.2 2.3 4.1 4.5 4.5l1.2-1.2-1.8-.9-.8.7c-.8-.4-1.5-1.1-1.9-1.9l.7-.8L9.9 7.8 9 9.5Z"/></svg>Talk to Our Team<span class="visually-hidden"> (opens WhatsApp in a new tab)</span></a>
+            <a class="btn btn-outline" href="#enquiry" data-focus-form="true">Send an Enquiry</a>
+          </div>
+          <div class="ctx-quick ctx-in ctx-d5">
+            <span class="ctx-quick-label">I&rsquo;m looking for</span>
+            <a class="ctx-pill" href="#enquiry" data-interest="Residential Solar" data-focus-form="true">Home</a>
+            <a class="ctx-pill" href="#enquiry" data-interest="Commercial Solar" data-focus-form="true">Business</a>
+            <a class="ctx-pill" href="#enquiry" data-interest="Industrial Solar" data-focus-form="true">Industry</a>
+          </div>
+          <p class="ctx-quickcall ctx-in ctx-d6">Prefer to call? <a href="tel:+919131910814">+91 91319 10814</a></p>
+        </div>
+
+        <div class="ctx-visual">
+          <!-- ======== PHOTO WALL: three columns of photos that scroll in opposite directions.
+                        Swap any src (assets/images/*.jpg) for your own photos. Each column repeats its set twice for the seamless loop,
+                        so change both copies. Landscape or portrait both work. ======== -->
+          <div class="ctx-wall" aria-hidden="true">
+            <div class="ctx-col c1"><div class="ctx-track"><figure class="ctx-shot"><img src="assets/images/contact-hero.jpg" alt="" width="800" height="600" decoding="async"></figure><figure class="ctx-shot"><img src="assets/images/type-business.jpg" alt="" width="800" height="600" decoding="async"></figure><figure class="ctx-shot"><img src="assets/images/type-industry.jpg" alt="" width="800" height="600" decoding="async"></figure><figure class="ctx-shot"><img src="assets/images/contact-hero.jpg" alt="" width="800" height="600" decoding="async"></figure><figure class="ctx-shot"><img src="assets/images/type-business.jpg" alt="" width="800" height="600" decoding="async"></figure><figure class="ctx-shot"><img src="assets/images/type-industry.jpg" alt="" width="800" height="600" decoding="async"></figure></div></div><div class="ctx-col c2"><div class="ctx-track"><figure class="ctx-shot"><img src="assets/images/type-home.jpg" alt="" width="800" height="600" decoding="async"></figure><figure class="ctx-shot"><img src="assets/images/contact-cta.jpg" alt="" width="800" height="600" decoding="async"></figure><figure class="ctx-shot"><img src="assets/images/contact-hero.jpg" alt="" width="800" height="600" decoding="async"></figure><figure class="ctx-shot"><img src="assets/images/type-home.jpg" alt="" width="800" height="600" decoding="async"></figure><figure class="ctx-shot"><img src="assets/images/contact-cta.jpg" alt="" width="800" height="600" decoding="async"></figure><figure class="ctx-shot"><img src="assets/images/contact-hero.jpg" alt="" width="800" height="600" decoding="async"></figure></div></div><div class="ctx-col c3"><div class="ctx-track"><figure class="ctx-shot"><img src="assets/images/type-industry.jpg" alt="" width="800" height="600" decoding="async"></figure><figure class="ctx-shot"><img src="assets/images/type-home.jpg" alt="" width="800" height="600" decoding="async"></figure><figure class="ctx-shot"><img src="assets/images/contact-cta.jpg" alt="" width="800" height="600" decoding="async"></figure><figure class="ctx-shot"><img src="assets/images/type-industry.jpg" alt="" width="800" height="600" decoding="async"></figure><figure class="ctx-shot"><img src="assets/images/type-home.jpg" alt="" width="800" height="600" decoding="async"></figure><figure class="ctx-shot"><img src="assets/images/contact-cta.jpg" alt="" width="800" height="600" decoding="async"></figure></div></div>
+          </div>
+
+          <a class="ctx-badge" href="#enquiry" data-focus-form="true" aria-label="Go to the enquiry form">
+            <svg viewBox="0 0 120 120" aria-hidden="true"><defs><path id="ctxCircle" d="M60 60m-45 0a45 45 0 1 1 90 0a45 45 0 1 1-90 0"/></defs><text class="ctx-badge-text"><textPath href="#ctxCircle" textLength="278">Let&rsquo;s talk solar &#8226; Let&rsquo;s talk solar &#8226; </textPath></text></svg>
+            <span class="ctx-badge-core"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </a>
+
+          <div class="ctx-chip ctx-chip-1" aria-hidden="true"><span class="ctx-chip-dot"></span>Home &amp; Business Solar</div>
+          <div class="ctx-chip ctx-chip-2" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19c3-4 6-6 10-8"/></svg>Clean Energy</div>
+          <div class="ctx-msg" aria-hidden="true"><span class="ctx-msg-text">Hello SOLNEX, I would like to know more about your solar solutions.</span><svg class="ctx-ticks" width="18" height="12" viewBox="0 0 18 12" fill="none" stroke="#2A9D6F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m1 6.5 3.2 3.2L10 2.5M7.5 9.7l.9.8L15 2.5"/></svg></div>
+          <a class="ctx-live" href="tel:+919131910814" aria-label="Call SOLNEX on +91 91319 10814"><span class="ctx-live-dot" aria-hidden="true"></span><span class="ctx-live-text"><small>Call or WhatsApp</small><b>+91 91319 10814</b></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== VALUES MARQUEE ===================== -->
+    <section class="marquee" aria-label="SOLNEX brand values">
+      <div class="marquee-track" aria-hidden="true">
+        <span>Sustainable Solutions</span><i></i><span>People Centric</span><i></i><span>Reliable Performance</span><i></i><span>Brighter Future</span><i></i>
+        <span>Sustainable Solutions</span><i></i><span>People Centric</span><i></i><span>Reliable Performance</span><i></i><span>Brighter Future</span><i></i>
+      </div>
+      <button type="button" class="marquee-toggle" id="marquee-toggle" aria-pressed="false" aria-label="Pause moving banner" hidden></button>
+      <p class="visually-hidden">Our values: Sustainable Solutions, People Centric, Reliable Performance, Brighter Future.</p>
+    </section>
+
+    <!-- ===================== 2. CONTACT INFORMATION: four equal boxes ===================== -->
+    <section class="ct-reach" id="reach" aria-labelledby="ct-reach-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="ct-reach-title">We&rsquo;re Here to Help.</h2>
+          <p>Whether you&rsquo;re exploring solar for the first time or planning a larger project, reach out to discuss your requirements.</p>
+        </div>
+
+        <div class="ctx-cards">
+
+          <!-- A. Call -->
+          <article class="ctx-card ctx-call ct-tilt reveal">
+            <span class="ctx-ico" aria-hidden="true"><i></i><i></i><i></i><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span>
+            <h3>Speak Directly With Our Team</h3>
+            <a class="ct-number" href="tel:+919131910814" aria-label="Call SOLNEX on +91 91319 10814">+91 91319 10814</a>
+            <div class="ctx-act"><a class="btn btn-primary" href="tel:+919131910814"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Call Now</a></div>
+          </article>
+
+          <!-- B. WhatsApp -->
+          <article class="ctx-card ctx-wa ct-tilt reveal">
+            <span class="ctx-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12Z"/><path d="M9 9.5c.4 2.2 2.3 4.1 4.5 4.5l1.2-1.2-1.8-.9-.8.7c-.8-.4-1.5-1.1-1.9-1.9l.7-.8L9.9 7.8 9 9.5Z"/></svg></span>
+            <h3>Connect on WhatsApp</h3>
+            <p>Send a quick message and tell us what kind of solar solution you&rsquo;re looking for.</p>
+            <div class="ctx-act"><a class="btn btn-whatsapp" href="https://wa.me/919131910814?text=Hello%20SOLNEX%2C%20I%20would%20like%20to%20know%20more%20about%20your%20solar%20solutions." target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12Z"/><path d="M9 9.5c.4 2.2 2.3 4.1 4.5 4.5l1.2-1.2-1.8-.9-.8.7c-.8-.4-1.5-1.1-1.9-1.9l.7-.8L9.9 7.8 9 9.5Z"/></svg>Chat on WhatsApp<span class="visually-hidden"> (opens in a new tab)</span></a></div>
+          </article>
+
+          <!-- C. Location. Email is intentionally left out: no verified SOLNEX email exists in the project.
+               When one is confirmed, add a fifth card (and change the grid to 5 columns, or use a 3 + 2 layout). -->
+          <article class="ctx-card ctx-loc ct-tilt reveal">
+            <span class="ctx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <h3>Solar Solutions in Bhopal</h3>
+            <p>Madhya Pradesh. Add your city in the enquiry form and we&rsquo;ll take it from there.</p>
+            <div class="ctx-act"><a class="btn btn-outline" href="#enquiry" data-focus-form="true">Send an Enquiry</a></div>
+          </article>
+
+          <!-- D. Instagram -->
+          <article class="ctx-card ctx-ig ct-tilt reveal">
+            <span class="ctx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></span>
+            <h3>Follow SOLNEX</h3>
+            <p>@solnex_energy_solution on Instagram.</p>
+            <div class="ctx-act"><a class="btn btn-outline" href="https://www.instagram.com/solnex_energy_solution?srtk=YXY1dHBiNG91NHBu" target="_blank" rel="noopener noreferrer">Open Instagram<span class="visually-hidden"> (opens in a new tab)</span></a></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SOLAR FOR EVERY SPACE (replace the three images with your own photos) ===================== -->
+    <section class="ctx-types" aria-labelledby="ctx-types-title">
+      <div class="container">
+        <div class="section-head reveal"><h2 id="ctx-types-title">Solar for Every Space.</h2><p>Tell us where you want solar, and we&rsquo;ll guide you from there.</p></div>
+        <div class="ctx-type-grid">
+          <article class="ctx-type reveal"><div class="ctx-type-img"><img src="assets/images/type-home.jpg" alt="Rooftop solar on a home" width="800" height="600" loading="lazy" decoding="async"></div><div class="ctx-type-body"><h3>Residential</h3><p>Rooftop solar for your home.</p><a class="ctx-type-link" href="#enquiry" data-interest="Residential Solar" data-focus-form="true">Enquire for my home</a></div></article>
+          <article class="ctx-type reveal"><div class="ctx-type-img"><img src="assets/images/type-business.jpg" alt="Solar panels on a commercial building" width="800" height="600" loading="lazy" decoding="async"></div><div class="ctx-type-body"><h3>Commercial</h3><p>Solar for shops, offices and commercial buildings.</p><a class="ctx-type-link" href="#enquiry" data-interest="Commercial Solar" data-focus-form="true">Enquire for my business</a></div></article>
+          <article class="ctx-type reveal"><div class="ctx-type-img"><img src="assets/images/type-industry.jpg" alt="Solar panels on an industrial facility" width="800" height="600" loading="lazy" decoding="async"></div><div class="ctx-type-body"><h3>Industrial</h3><p>Solar for factories, warehouses and large facilities.</p><a class="ctx-type-link" href="#enquiry" data-interest="Industrial Solar" data-focus-form="true">Enquire for my facility</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. ENQUIRY FORM ===================== -->
+    <section class="ct-enquiry" id="enquiry" aria-labelledby="ct-enquiry-title">
+      <div class="container ct-enquiry-grid">
+
+        <div class="ct-aside">
+          <h2 id="ct-enquiry-title">Tell Us About Your Solar Needs.</h2>
+          <p>Share a few details, and our team can better understand your requirements.</p>
+          <ol class="ct-flow ct-observe" aria-label="How your enquiry reaches SOLNEX">
+            <li>Fill in the form. Only your name, phone number and interest are required.</li>
+            <li>WhatsApp opens with your details already written out.</li>
+            <li>Press Send in WhatsApp. That is the step that delivers your enquiry.</li>
+          </ol>
+        </div>
+
+        <div class="ct-form-card reveal">
+          <form id="contact-form" class="ct-form" novalidate>
+            <p class="ct-required-note">Fields marked <span class="req" aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+
+            <div class="ct-grid">
+              <div class="field">
+                <label for="cf-name">Full Name <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="cf-name" name="name" autocomplete="name" maxlength="80" placeholder="Your full name" required aria-required="true" aria-describedby="cf-err-name">
+                <p class="field-error" id="cf-err-name" role="alert"></p>
+              </div>
+              <div class="field">
+                <label for="cf-phone">Phone Number <span class="req" aria-hidden="true">*</span></label>
+                <input type="tel" id="cf-phone" name="phone" autocomplete="tel" inputmode="tel" maxlength="20" placeholder="10-digit mobile number" required aria-required="true" aria-describedby="cf-err-phone">
+                <p class="field-error" id="cf-err-phone" role="alert"></p>
+              </div>
+              <div class="field">
+                <label for="cf-email">Email Address <span class="opt">(optional)</span></label>
+                <input type="email" id="cf-email" name="email" autocomplete="email" inputmode="email" maxlength="120" placeholder="you@example.com" aria-describedby="cf-err-email">
+                <p class="field-error" id="cf-err-email" role="alert"></p>
+              </div>
+              <div class="field">
+                <label for="cf-city">City <span class="opt">(optional)</span></label>
+                <input type="text" id="cf-city" name="city" autocomplete="address-level2" maxlength="60" placeholder="e.g. Bhopal">
+              </div>
+              <div class="field field-full">
+                <label for="cf-interest">I&rsquo;m Interested In <span class="req" aria-hidden="true">*</span></label>
+                <select id="cf-interest" name="interest" required aria-required="true" aria-describedby="cf-err-interest">
+                  <option value="">Choose an option</option>
+                  <option>Residential Solar</option>
+                  <option>Commercial Solar</option>
+                  <option>Industrial Solar</option>
+                  <option>General Enquiry</option>
+                </select>
+                <p class="field-error" id="cf-err-interest" role="alert"></p>
+              </div>
+              <div class="field field-full">
+                <label for="cf-message">Tell Us More About Your Project <span class="opt">(optional)</span></label>
+                <textarea id="cf-message" name="message" rows="4" maxlength="500" placeholder="Anything that helps: your property, roof space, monthly electricity use, or your timeline."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-whatsapp btn-block ct-submit" id="cf-submit" aria-describedby="cf-handoff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12Z"/><path d="M9 9.5c.4 2.2 2.3 4.1 4.5 4.5l1.2-1.2-1.8-.9-.8.7c-.8-.4-1.5-1.1-1.9-1.9l.7-.8L9.9 7.8 9 9.5Z"/></svg><span id="cf-submit-label">Send My Enquiry</span></button>
+            <p class="ct-handoff" id="cf-handoff">Your enquiry will be shared through WhatsApp. It opens with your details filled in, and nothing is sent until you press Send there.</p>
+
+            <div class="form-status" id="cf-status" role="status" aria-live="polite"></div>
+
+            <div class="form-fallback" id="cf-fallback" hidden>
+              <p>WhatsApp could not be opened automatically. Use the button to try again, or copy the message below and send it to SOLNEX on WhatsApp.</p>
+              <textarea id="cf-fallback-text" readonly rows="8" aria-label="Your enquiry message"></textarea>
+              <div class="btn-row">
+                <button type="button" class="btn btn-outline" id="cf-copy">Copy message</button>
+                <a class="btn btn-primary" id="cf-retry" href="#enquiry" target="_blank" rel="noopener noreferrer">Try WhatsApp again</a>
+              </div>
+            </div>
+          </form>
+          <noscript><p class="ct-noscript">The enquiry form needs JavaScript. You can still use the Call Now and Chat on WhatsApp buttons above.</p></noscript>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== 4. WHY CONTACT SOLNEX ===================== -->
+    <section class="ct-journey-section" aria-labelledby="ct-path-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="ct-path-title">Your Solar Journey Starts With a Conversation.</h2>
+        </div>
+
+        <div class="ct-journey ct-observe">
+          <div class="ct-arc-wrap" aria-hidden="true">
+            <svg class="ct-arc" viewBox="0 0 1000 160" preserveAspectRatio="none" focusable="false">
+              <path class="ct-arc-base" pathLength="1" d="M0 150 Q500 -70 1000 150"/>
+              <path class="ct-arc-flow" d="M0 150 Q500 -70 1000 150"/>
+            </svg>
+            <span class="ct-node n1"></span><span class="ct-node n2"></span><span class="ct-node n3"></span>
+          </div>
+
+          <ul class="ct-path">
+            <li class="reveal">
+              <span class="ct-path-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 5 5"/></svg></span>
+              <h3>Understand Your Options</h3>
+              <p>Discuss your space, energy needs, and solar requirements.</p>
+            </li>
+            <li class="reveal">
+              <span class="ct-path-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18l-2 11H5L3 8Z"/><path d="M9 8l-1 11M15 8l1 11M4 13.5h16"/></svg></span>
+              <h3>Explore Suitable Solutions</h3>
+              <p>Learn about potential approaches for your residential, commercial, or industrial project.</p>
+            </li>
+            <li class="reveal">
+              <span class="ct-path-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M12 6h7l2 2.5-2 2.5h-7"/><path d="M12 13H5l-2 2.5L5 18h7"/></svg></span>
+              <h3>Get Clear Guidance</h3>
+              <p>Understand the next steps and the information needed to move forward.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="ctx-faq" aria-labelledby="ctx-faq-title">
+      <div class="container ctx-faq-wrap">
+        <div class="section-head reveal"><h2 id="ctx-faq-title">Before You Reach Out.</h2><p>A few quick answers about getting in touch.</p></div>
+        <div class="ctx-faq-list reveal">
+          <details><summary>What should I share in my enquiry?</summary><p>Your name, phone number and what you&rsquo;re interested in are enough to start. Your city, roof or open space, and monthly electricity use help us understand your requirement faster.</p></details>
+          <details><summary>Does the form send my details automatically?</summary><p>No. It opens WhatsApp with your message already written, and your enquiry is delivered only when you press Send there.</p></details>
+          <details><summary>Can I call instead?</summary><p>Yes. Call <a href="tel:+919131910814">+91 91319 10814</a> to speak with our team directly.</p></details>
+          <details><summary>I&rsquo;m not sure what I need. Should I still reach out?</summary><p>Yes. Choose General Enquiry, tell us what you&rsquo;re planning, and we&rsquo;ll help you with the next step.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 5. FINAL CTA (white page, green panel, real photo) ===================== -->
+    <section class="ct-final" aria-labelledby="ct-final-title">
+      <div class="container">
+        <div class="ct-final-panel">
+          <div class="ct-final-copy reveal">
+            <h2 id="ct-final-title">Ready to Explore Solar?</h2>
+            <p>Tell us what you&rsquo;re planning. Let&rsquo;s start a conversation about your solar requirements.</p>
+            <div class="ct-final-actions">
+              <a class="btn btn-primary ct-pulse" href="https://wa.me/919131910814?text=Hello%20SOLNEX%2C%20I%20would%20like%20to%20know%20more%20about%20your%20solar%20solutions." target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12Z"/><path d="M9 9.5c.4 2.2 2.3 4.1 4.5 4.5l1.2-1.2-1.8-.9-.8.7c-.8-.4-1.5-1.1-1.9-1.9l.7-.8L9.9 7.8 9 9.5Z"/></svg>Chat With SOLNEX<span class="visually-hidden"> (opens WhatsApp in a new tab)</span></a>
+              <a class="ct-final-call" href="tel:+919131910814">Call +91 91319 10814</a>
+            </div>
+          </div>
+
+          <!-- ======== SECOND IMAGE: replace assets/images/contact-cta.jpg (same name) or change the src. Best size: 1000 x 800. ======== -->
+          <div class="ct-final-media reveal">
+            <div class="ct-final-photo">
+              <img src="assets/images/contact-cta.jpg" alt="Solar panel installation" width="1000" height="800" loading="lazy" decoding="async">
+            </div>
+            <span class="ct-final-badge" aria-hidden="true"><i></i><i></i><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating WhatsApp button (link is set by the shared script.js) -->
+  <a class="float-wa" id="float-whatsapp" href="#enquiry" target="_blank" rel="noopener noreferrer" aria-label="Chat with SOLNEX on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12Z"/><path d="M9 9.5c.4 2.2 2.3 4.1 4.5 4.5l1.2-1.2-1.8-.9-.8.7c-.8-.4-1.5-1.1-1.9-1.9l.7-.8L9.900 7.800 9 9.500Z"/></svg>
+  </a>
+
+  <!-- ===================== FOOTER (same as Home Page; placeholder email link removed) ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.svg" alt="SOLNEX Energy Solution" width="140" height="95" loading="lazy">
+        <p>Clean Energy for a Brighter Tomorrow.</p>
+      </div>
+
+      <nav aria-label="Footer">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="index.html#subsidy">Subsidy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="#enquiry" id="footer-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="tel:+919131910814">Call +91 91319 10814</a></li>
+          <li><a href="https://www.instagram.com/solnex_energy_solution?srtk=YXY1dHBiNG91NHBu" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> SOLNEX Energy Solution. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./script.js" defer></script>
+  <script src="./contact.js" defer></script>
+</body>
+</html>

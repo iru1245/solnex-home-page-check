@@ -1,0 +1,187 @@
+/* ==========================================================
+   SOLNEX – Services page styles (loads after style.css)
+   Sections: Hero · Services · Why/How (sw-) · CTA
+   ========================================================== */
+
+body.sv { background: #fff; }
+
+/* ---------- Shared ---------- */
+.sv-kicker {
+  display: inline-block; margin: 0 0 14px; padding-left: 34px; position: relative;
+  font-family: var(--font-head); font-weight: 700; font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: var(--green);
+}
+.sv-kicker::before { content: ""; position: absolute; left: 0; top: 50%; width: 24px; height: 2px; background: linear-gradient(90deg, var(--green), var(--orange)); }
+.sv-head { max-width: 700px; margin: 0 auto clamp(34px, 5vw, 60px); text-align: center; }
+.sv-head .sv-kicker { padding-left: 0; }
+.sv-head .sv-kicker::before { display: none; }
+.sv-head p:last-child { color: var(--muted); font-size: 1.05rem; margin: 0; }
+.sv-tag {
+  display: inline-block; padding: 6px 16px; border-radius: 999px;
+  font-family: var(--font-head); font-weight: 700; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase;
+  background: var(--cream); color: var(--green); border: 1px solid rgba(22,78,59,.18);
+}
+.sv-num { display: block; font-family: var(--font-head); font-weight: 800; font-size: 3rem; line-height: 1; color: var(--orange-dark); margin-bottom: 10px; }
+
+/* Scroll reveal (class "sv-js" is added by services.js only when it is safe) */
+.sv-js .sv-reveal { opacity: 0; translate: 0 28px; transition: opacity .8s var(--ease), translate .8s var(--ease); }
+.sv-js .sv-reveal.is-in { opacity: 1; translate: none; }
+
+/* ==========================================================
+   1. HERO
+   ========================================================== */
+.sv-hero { padding: clamp(40px, 6vw, 88px) 0 clamp(50px, 6vw, 90px); background: linear-gradient(180deg, #EAF7F1 0%, #fff 78%); overflow: hidden; }
+.sv-hero-inner { display: grid; grid-template-columns: 1.15fr .9fr .62fr; gap: clamp(22px, 3.2vw, 48px); align-items: center; }
+.sv-hero h1 { font-size: clamp(2.1rem, 4.2vw, 3.5rem); margin-bottom: .5em; }
+.sv-script { font-family: var(--font-script); font-weight: 400; font-size: 1.3em; color: var(--orange-dark); white-space: nowrap; }
+.sv-lead { color: var(--muted); font-size: 1.05rem; max-width: 52ch; }
+
+.sv-hero-center { position: relative; }
+.sv-capsule { aspect-ratio: 3 / 4; border-radius: 999px; box-shadow: var(--shadow-hover); }
+.sv-panel-lines { position: absolute; inset: 0; z-index: 2; pointer-events: none; border-radius: inherit;
+  background: linear-gradient(rgba(255,255,255,.22) 1px, transparent 1px) 0 0 / 100% 20%, linear-gradient(90deg, rgba(255,255,255,.22) 1px, transparent 1px) 0 0 / 25% 100%; }
+.sv-orb { position: absolute; z-index: 3; right: -10px; bottom: 9%; width: 70px; height: 70px; display: grid; place-items: center; border-radius: 50%;
+  background: var(--orange-dark); color: #fff; border: 5px solid #fff; box-shadow: var(--shadow-hover); text-decoration: none; transition: transform .35s var(--ease), background .3s; }
+.sv-orb:hover { transform: scale(1.1) rotate(8deg); background: var(--green); }
+
+.sv-hero-right { display: grid; gap: 30px; }
+.sv-mini { display: grid; }
+.sv-mini a { display: flex; align-items: center; gap: 14px; padding: 16px 4px; border-bottom: 1px solid var(--border); text-decoration: none;
+  font-family: var(--font-head); font-weight: 700; font-size: .98rem; color: var(--green); transition: padding .3s var(--ease), color .3s; }
+.sv-mini a:first-child { border-top: 1px solid var(--border); }
+.sv-mini a span { font-size: .75rem; letter-spacing: .1em; color: var(--orange-dark); }
+.sv-mini a:hover { padding-left: 12px; color: var(--orange-dark); }
+.sv-hero-foot p { margin: 0 0 14px; font-size: .9rem; color: var(--muted); }
+.sv-thumbs { display: flex; }
+.sv-thumbs .img-frame { width: 54px; height: 54px; border-radius: 50%; border: 3px solid #fff; margin-left: -12px; box-shadow: var(--shadow); }
+.sv-thumbs .img-frame:first-child { margin-left: 0; }
+.sv-thumbs .img-frame::before { display: none; }
+
+/* ==========================================================
+   2. SERVICES
+   ========================================================== */
+.sv-services { padding: clamp(60px, 8vw, 104px) 0; background: #fff; }
+.sv-svc { margin-bottom: clamp(40px, 6vw, 72px); }
+.sv-svc:last-child { margin-bottom: 0; }
+.sv-svc h3 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); color: var(--green); margin-bottom: .4em; }
+.sv-svc p { color: var(--muted); }
+.sv-svc .img-frame img { transition: transform 1s var(--ease); }
+.sv-svc:hover .img-frame img { transform: scale(1.05); }
+
+/* 01 Residential: image-led, text card overlaps the image */
+.sv-res { display: grid; grid-template-columns: 1.35fr 1fr; align-items: center; }
+.sv-res-media { aspect-ratio: 16 / 11; border-radius: 30px; box-shadow: var(--shadow-hover); }
+.sv-res-copy { position: relative; z-index: 2; margin-left: -90px; padding: clamp(26px, 3.4vw, 46px); background: #fff; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-hover); border-top: 5px solid var(--orange); }
+.sv-res-copy p { margin-bottom: 1.2em; }
+
+/* 02 Commercial: soft split panel, offset frame on the image */
+.sv-com { display: grid; grid-template-columns: 1fr 1.05fr; gap: clamp(24px, 4vw, 56px); align-items: center; padding: clamp(26px, 4vw, 56px); background: var(--soft); border: 1px solid var(--border); border-radius: 30px; }
+.sv-com-copy p { margin-bottom: 1.2em; max-width: 46ch; }
+.sv-com-media-wrap { position: relative; }
+.sv-com-media-wrap::before { content: ""; position: absolute; inset: 18px -16px -16px 18px; border: 2px solid var(--orange); border-radius: 26px; opacity: .55; }
+.sv-com-media { position: relative; aspect-ratio: 5 / 4; border-radius: 24px; box-shadow: var(--shadow-hover); }
+
+/* 03 Industrial: wide panorama, dark overlay panel */
+.sv-ind { position: relative; }
+.sv-ind-media { aspect-ratio: 21 / 9; min-height: 340px; border-radius: 30px; box-shadow: var(--shadow-hover); }
+.sv-ind-grid { position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: linear-gradient(rgba(255,255,255,.14) 1px, transparent 1px) 0 0 / 48px 48px, linear-gradient(90deg, rgba(255,255,255,.14) 1px, transparent 1px) 0 0 / 48px 48px; }
+.sv-ind-copy { position: absolute; z-index: 3; left: clamp(16px, 3vw, 40px); bottom: clamp(-34px, -3vw, -18px); width: min(470px, calc(100% - 32px)); padding: clamp(24px, 3vw, 38px); background: var(--green); color: #fff; border-radius: var(--radius); box-shadow: 0 24px 50px rgba(14,58,43,.35); border-left: 5px solid var(--orange); }
+.sv-ind-copy .sv-num { color: #FFC999; }
+.sv-ind-copy h3 { color: #fff; }
+.sv-ind-copy p { color: rgba(255,255,255,.88); margin-bottom: 1.2em; }
+.sv-ind-copy .sv-tag { background: rgba(255,255,255,.12); color: #fff; border-color: rgba(255,255,255,.35); }
+.sv-ind { margin-bottom: clamp(60px, 8vw, 90px); }
+
+/* ==========================================================
+   3. WHY SOLNEX + HOW WE WORK  (prefix sw-)
+   ========================================================== */
+.sw { position: relative; padding: clamp(64px, 8vw, 110px) 0; background: var(--soft); overflow: hidden; }
+.sw::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(rgba(22,78,59,.05) 1px, transparent 1px) 0 0 / 56px 56px, linear-gradient(90deg, rgba(22,78,59,.05) 1px, transparent 1px) 0 0 / 56px 56px;
+  -webkit-mask-image: linear-gradient(#000, transparent 80%); mask-image: linear-gradient(#000, transparent 80%); }
+.sw-wrap { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(24px, 4vw, 56px); align-items: start; }
+
+.sw-panel { position: sticky; top: calc(var(--header-h) + 24px); isolation: isolate; overflow: hidden; padding: clamp(28px, 4vw, 52px); background: var(--green); color: #fff; border-radius: 30px; box-shadow: 0 30px 60px rgba(14,58,43,.28); }
+.sw-panel::before { content: ""; position: absolute; z-index: -1; right: -120px; top: -120px; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, rgba(249,115,22,.38), rgba(249,115,22,0) 70%); }
+.sw-panel::after { content: ""; position: absolute; z-index: -1; inset: 0;
+  background: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px) 0 0 / 40px 40px, linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px) 0 0 / 40px 40px;
+  -webkit-mask-image: linear-gradient(135deg, #000, transparent 70%); mask-image: linear-gradient(135deg, #000, transparent 70%); }
+.sw-art { display: block; width: 100%; max-width: 340px; height: auto; margin: 0 0 clamp(20px, 3vw, 34px); }
+.sw-kicker { margin: 0 0 14px; font-family: var(--font-head); font-weight: 700; font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: #FFC999; }
+.sw-panel h2 { color: #fff; margin-bottom: .5em; }
+.sw-panel h2::after { content: ""; display: block; width: 56px; height: 4px; margin-top: 16px; border-radius: 4px; background: linear-gradient(90deg, var(--orange), #FFC999); }
+.sw-lead { margin: 0; color: rgba(255,255,255,.86); font-size: 1.02rem; max-width: 46ch; }
+.sw-panel .btn-row { margin-top: 1.8rem; }
+
+.sw-steps { --pad: 26px; --badge: 64px; position: relative; display: grid; gap: 18px; counter-reset: sw; }
+.sw-steps::before { content: ""; position: absolute; z-index: 0; left: calc(var(--pad) + var(--badge) / 2 - 1px); top: 40px; bottom: 40px; width: 2px; border-radius: 2px;
+  background: repeating-linear-gradient(to bottom, var(--orange) 0 6px, transparent 6px 12px); opacity: .7; }
+.sw-step { position: relative; z-index: 1; display: grid; grid-template-columns: var(--badge) minmax(0, 1fr); gap: 22px; align-items: start; padding: var(--pad);
+  background: #fff; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow);
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s var(--ease); }
+.sw-step::after { counter-increment: sw; content: "0" counter(sw); position: absolute; right: 22px; bottom: 6px; font-family: var(--font-head); font-weight: 800; font-size: 3.6rem; line-height: 1; color: var(--green); opacity: .05; pointer-events: none; transition: opacity .4s, transform .4s var(--ease); }
+.sw-step:hover { transform: translateX(6px); border-color: rgba(249,115,22,.45); box-shadow: var(--shadow-hover); }
+.sw-step:hover::after { opacity: .1; transform: translateY(-4px); }
+/* staggered reveal without delaying hover effects */
+.sv-js .sw-step.sv-reveal { transition: opacity .8s var(--ease) calc(var(--i, 0) * 90ms), translate .8s var(--ease) calc(var(--i, 0) * 90ms), transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s var(--ease); }
+
+.sw-icon { width: var(--badge); height: var(--badge); display: grid; place-items: center; border-radius: 18px; background: var(--soft); color: var(--green); border: 1px solid var(--border); transition: background .35s, color .35s, transform .45s var(--ease); }
+.sw-icon svg { width: 28px; height: 28px; }
+.sw-step:hover .sw-icon { background: var(--green); color: #fff; transform: rotate(-6deg) scale(1.05); }
+.sw-step-no { display: block; margin-bottom: 4px; font-family: var(--font-head); font-weight: 700; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: #C2410C; }
+.sw-body h3 { margin: 0 0 .35em; font-size: 1.2rem; color: var(--green); }
+.sw-body p { margin: 0; color: var(--muted); font-size: .96rem; max-width: 52ch; }
+
+/* ==========================================================
+   4. FINAL CTA
+   ========================================================== */
+.sv-cta { position: relative; overflow: hidden; padding: clamp(70px, 9vw, 120px) 0; background: var(--green-dark); color: #fff; text-align: center; isolation: isolate; }
+.sv-cta-bg { position: absolute; inset: 0; z-index: -2;
+  background: radial-gradient(520px circle at 85% 0%, rgba(249,115,22,.35), transparent 65%), radial-gradient(600px circle at 10% 100%, rgba(11,83,209,.3), transparent 65%), linear-gradient(135deg, #0E3A2B, #164E3B); }
+.sv-cta-panels { position: absolute; z-index: -1; left: 0; right: 0; bottom: 0; display: flex; justify-content: center; gap: 14px; opacity: .22; transform: translateY(40%); }
+.sv-cta-panels i { width: clamp(70px, 12vw, 160px); aspect-ratio: 3 / 2; border: 1.5px solid #fff; border-radius: 8px; transform: skewX(-14deg);
+  background: linear-gradient(rgba(255,255,255,.4) 1px, transparent 1px) 0 0 / 100% 33%, linear-gradient(90deg, rgba(255,255,255,.4) 1px, transparent 1px) 0 0 / 33% 100%; }
+.sv-cta-inner { position: relative; max-width: 740px; }
+.sv-cta h2 { color: #fff; }
+.sv-cta p { color: rgba(255,255,255,.86); font-size: 1.05rem; max-width: 58ch; margin: 0 auto 1.8rem; }
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media (max-width: 1024px) {
+  .sv-hero-inner { grid-template-columns: 1.2fr 1fr; }
+  .sv-hero-right { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; align-items: end; gap: 30px; }
+  .sv-res-copy { margin-left: -50px; }
+}
+@media (max-width: 960px) {
+  .sw-wrap { grid-template-columns: 1fr; }
+  .sw-panel { position: relative; top: 0; }
+  .sw-art { max-width: 280px; }
+}
+@media (max-width: 860px) {
+  .sv-hero-inner { grid-template-columns: 1fr; }
+  .sv-hero-center { max-width: 380px; margin-inline: auto; width: 100%; }
+  .sv-hero-right { grid-template-columns: 1fr; }
+  .sv-res, .sv-com { grid-template-columns: 1fr; }
+  .sv-res-copy { margin: -48px 18px 0; }
+  .sv-com-media-wrap::before { inset: 14px -8px -10px 14px; }
+  .sv-ind-media { aspect-ratio: 4 / 3; min-height: 0; }
+  .sv-ind-copy { position: relative; left: auto; bottom: auto; width: auto; margin: -48px 18px 0; }
+  .sv-ind { margin-bottom: 40px; }
+}
+@media (max-width: 520px) {
+  .sw-steps { --pad: 20px; --badge: 52px; }
+  .sw-step { gap: 16px; }
+  .sw-icon { border-radius: 14px; }
+  .sw-icon svg { width: 24px; height: 24px; }
+  .sw-step::after { font-size: 2.8rem; }
+  .sw-step:hover { transform: none; }
+  .sv-script { white-space: normal; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sv-js .sv-reveal { opacity: 1 !important; translate: none !important; }
+  .sw-step, .sw-step::after, .sw-icon, .sv-svc .img-frame img, .sv-orb, .sv-mini a { transition: none !important; }
+  .sw-step:hover, .sw-step:hover .sw-icon, .sw-step:hover::after { transform: none; }
+  .sv-svc:hover .img-frame img { transform: none; }
+}
